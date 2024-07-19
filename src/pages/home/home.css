@@ -12,3 +12,55 @@
   text-align: center;
   gap: 30px;
 }
+
+.hero h1 {
+}
+
+.hero p {
+}
+
+.hero form {
+  padding: 8px;
+  width: 80%;
+  background-color: whitesmoke;
+  border-radius: 5px;
+  font-size: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+}
+
+.hero input {
+  background-color: whitesmoke;
+  flex: 1;
+  font-size: 16px;
+  border: none;
+  outline: none;
+  padding-left: 10px;
+}
+
+.hero button {
+  border: none;
+  background: greenyellow;
+  color: black;
+  font-size: 16px;
+  padding: 10px 30px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.crypto-table {
+  max-width: 800px;
+  margin: auto;
+  background: whitesmoke;
+  border-radius: 15x;
+}
+
+.table-layout {
+  display: grid;
+  grid-template-columns: 0.5fr 1.5fr 1.5fr 1fr 1fr 1.5fr;
+  padding: 15px 20px;
+  align-items: center;
+  border-bottom: 1px solid gray;
+}
