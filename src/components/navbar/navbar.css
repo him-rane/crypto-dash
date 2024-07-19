@@ -1,0 +1,55 @@
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px 10%;
+  color: black;
+}
+
+.navbar .logo {
+  font-size: 30px;
+}
+
+.navbar ul {
+  display: flex;
+  gap: 40px;
+  list-style: none;
+}
+
+.navbar li {
+  cursor: pointer;
+}
+
+.nav-right {
+  display: flex;
+  align-items: center;
+  gap: max(1vw, 12px);
+}
+
+.navbar select {
+  background: transparent;
+  color: black;
+  border-radius: 0px;
+  border: none;
+}
+
+.navbar option {
+  background: white;
+  color: black;
+  border-radius: 0px;
+  border: none;
+}
+
+.navbar button {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 25px;
+  border-radius: 20px;
+  font-size: 15px;
+  font-weight: 500;
+  color: blueviolet;
+  font-weight: bolder;
+  border: none;
+  cursor: pointer;
+}
