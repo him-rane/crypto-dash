@@ -59,8 +59,27 @@
 
 .table-layout {
   display: grid;
-  grid-template-columns: 0.5fr 1.5fr 1.5fr 1fr 1fr 1.5fr;
+  grid-template-columns: 0.5fr 1.5fr 1fr 1fr 1.5fr;
   padding: 15px 20px;
   align-items: center;
   border-bottom: 1px solid gray;
+}
+
+.table-layout div {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.table-layout div img {
+  width: 30px;
+}
+
+.table-layout .green {
+  padding: 10px;
+  color: green;
+}
+.table-layout .red {
+  padding: 10px;
+  color: red;
 }
