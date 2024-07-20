@@ -1,8 +1,9 @@
 import React, { useState, useEffect, useContext } from "react";
 import { CoinContext } from "../../context/CoinContext";
+import "./converter.css"; // Import the CSS file
 
 function CurrencyConverter() {
-  const { allCoin, currency } = useContext(CoinContext);
+  const { allCoin } = useContext(CoinContext);
   const [displayCoin, setDisplayCoin] = useState([]);
   const [fromCurrency, setFromCurrency] = useState("bitcoin");
   const [toCurrency, setToCurrency] = useState("usd");
@@ -42,11 +43,12 @@ function CurrencyConverter() {
   };
 
   return (
-    <div>
-      <h1>Cryptocurrency Converter</h1>
+    <div className="container">
+      <h1 className="title">Cryptocurrency Converter</h1>
       <div>
-        <label>From:</label>
+        <label className="label">From:</label>
         <select
+          className="select"
           value={fromCurrency}
           onChange={(e) => setFromCurrency(e.target.value)}
         >
@@ -58,14 +60,16 @@ function CurrencyConverter() {
           ))}
         </select>
         <input
+          className="input"
           type="number"
           value={amount}
           onChange={(e) => setAmount(Number(e.target.value))}
         />
       </div>
       <div>
-        <label>To:</label>
+        <label className="label">To:</label>
         <select
+          className="select"
           value={toCurrency}
           onChange={(e) => setToCurrency(e.target.value)}
         >
@@ -78,7 +82,7 @@ function CurrencyConverter() {
         </select>
       </div>
       <div>
-        <h2>
+        <h2 className="result">
           Result: {result}{" "}
           {toCurrency === "usd"
             ? "USD"
