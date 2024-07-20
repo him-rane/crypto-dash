@@ -7,6 +7,7 @@
   max-width: 500px;
   margin: 100px auto;
   height: 100%;
+  text-align: center;
 }
 
 .title {
@@ -27,7 +28,6 @@
 
 .select,
 .input {
-  width: calc(100% - 22px);
   padding: 10px;
   border: 1px solid #ccc;
   border-radius: 4px;
@@ -35,12 +35,15 @@
 }
 
 .select {
+  width: 70%;
   margin-bottom: 10px;
 }
 
-.input {
+input {
+  width: 65%;
   font-size: 1.2rem;
-  text-align: right;
+  text-align: left;
+  --webkit-perspective: none;
 }
 
 .result {

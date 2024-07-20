@@ -1,6 +1,4 @@
 import { createContext, useState, useEffect } from "react";
-import { DefaultContext } from "react-icons";
-import axios from "axios";
 
 export const CoinContext = createContext();
 
@@ -17,7 +15,7 @@ export const CoinContextProvider = (props) => {
       headers: {
         accept: "application/json",
 
-        // "x-cg-pro-api-key": process.env.API_KEY,
+        "x-cg-pro-api-key": process.env.API_KEY,
       },
     };
 

@@ -48,7 +48,13 @@ function CurrencyConverter() {
         <h1 className="title">
           <span>Cryptocurrency</span> Converter
         </h1>
-        <div>
+        <input
+          className="input"
+          type="number"
+          value={amount}
+          onChange={(e) => setAmount(Number(e.target.value))}
+        />
+        <div id="select-field">
           <label className="label">From:</label>
           <select
             className="select"
@@ -62,14 +68,7 @@ function CurrencyConverter() {
               </option>
             ))}
           </select>
-          <input
-            className="input"
-            type="number"
-            value={amount}
-            onChange={(e) => setAmount(Number(e.target.value))}
-          />
-        </div>
-        <div>
+
           <label className="label">To:</label>
           <select
             className="select"
@@ -84,6 +83,7 @@ function CurrencyConverter() {
             ))}
           </select>
         </div>
+
         <div>
           <h2 className="result">
             Result: {result}{" "}

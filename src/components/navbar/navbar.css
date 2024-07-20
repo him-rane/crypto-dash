@@ -1,25 +1,68 @@
 .navbar {
   display: flex;
   align-items: center;
+  flex-wrap: wrap;
   justify-content: space-between;
-  padding: 20px 10%;
   color: black;
-  width: 100%;
+  margin: 2vh;
 }
 
 .navbar .logo {
   display: flex;
-  justify-content: space-between;
-  font-size: 30px;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 2.2vmax;
+  font-weight: 500;
+}
+
+.logo p span {
+  color: green;
+}
+
+.navbar ul {
+  margin: 10px;
+  list-style: none;
+  display: flex;
+  gap: 2vmax;
+  text-decoration: none;
+  font-size: 1.5vmax;
+  list-style: none;
+  padding: 0;
+  margin: 0;
 }
 
 a {
   text-decoration: none;
   color: inherit;
 }
+
 .active {
   color: green;
 }
+
+.navbar select {
+  background: transparent;
+  color: black;
+  font-size: 1.5vmax;
+  border: none;
+}
+.navbar option {
+  background: green;
+  color: black;
+  font-size: 1.5vmax;
+  border: none;
+}
+
+@media screen and (max-width: 500px) {
+  .logo p {
+    display: none;
+  }
+}
+
+/* 
+
+
+
 
 .logo {
   display: flex;
@@ -32,21 +75,17 @@ a {
 }
 
 .logo p {
-  margin-left: 10px;
   font-size: 1.5rem;
   font-weight: 600;
   display: flex;
   align-items: center;
 }
 
-.logo p span {
-  color: green;
-}
+.
 
 .navbar ul {
-  margin-left: -120px;
   display: flex;
-  gap: 40px;
+  gap: 40rem;
   list-style: none;
 }
 
@@ -59,13 +98,12 @@ a {
 .nav-right {
   display: flex;
   align-items: center;
-  gap: max(1vw, 12px);
 }
 
 .navbar select {
   background: transparent;
   color: black;
-  border-radius: 0px;
+  border-radius: 0rem;
   font-size: 1.2rem;
   border: none;
 }
@@ -73,16 +111,7 @@ a {
 .navbar option {
   background: white;
   color: black;
-  border-radius: 0px;
+  border-radius: 0rem;
   border: none;
   font-size: 1.2rem;
-}
-
-@media (max-width: 800px) {
-  .navbar {
-    padding: 20px 8%;
-  }
-  .navbar ul {
-    display: none;
-  }
-}
+} */

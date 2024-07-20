@@ -1,5 +1,5 @@
 import React, { useContext, useEffect, useState } from "react";
-import axios from "axios";
+
 import "./home.css";
 import { CoinContext } from "../../context/CoinContext";
 
@@ -48,14 +48,12 @@ const Home = () => {
           <p>Coins</p>
           <p>Price</p>
           <p>24H Change</p>
-          {/* <p>7D Change</p> */}
-          <p>Market Cap</p>
         </div>
         {displayCoin?.slice(0, 10)?.map((item, index) => (
           <div className="table-layout" key={index}>
             <p>{item?.market_cap_rank}</p>
             <div>
-              <img src={item?.image}></img>
+              <img src={item?.image} alt="logo"></img>
               <p>{item?.name + "-" + item?.symbol}</p>
             </div>
             <p>
@@ -68,10 +66,10 @@ const Home = () => {
             >
               {Math.floor(item?.price_change_percentage_24h * 100) / 100}
             </p>
-            <p>
+            {/* <p>
               {" "}
               {currency?.symbol} {item?.market_cap.toLocaleString()}
-            </p>
+            </p> */}
           </div>
         ))}
       </div>
