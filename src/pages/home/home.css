@@ -29,6 +29,7 @@
   justify-content: space-between;
   align-items: center;
   gap: 10px;
+  border: 1px solid gray;
 }
 
 .hero input {
@@ -66,6 +67,7 @@
 
 .crypto-table div:first-child {
   border-bottom: 1px solid greenyellow;
+  font-weight: bolder;
 }
 
 .table-layout div {

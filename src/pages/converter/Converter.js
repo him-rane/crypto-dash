@@ -43,55 +43,57 @@ function CurrencyConverter() {
   };
 
   return (
-    <div className="container">
-      <h1 className="title">
-        <span>Cryptocurrency</span> Converter
-      </h1>
-      <div>
-        <label className="label">From:</label>
-        <select
-          className="select"
-          value={fromCurrency}
-          onChange={(e) => setFromCurrency(e.target.value)}
-        >
-          <option value="usd">USD</option>
-          {displayCoin.map((coin) => (
-            <option key={coin.id} value={coin.id}>
-              {coin.name}
-            </option>
-          ))}
-        </select>
-        <input
-          className="input"
-          type="number"
-          value={amount}
-          onChange={(e) => setAmount(Number(e.target.value))}
-        />
-      </div>
-      <div>
-        <label className="label">To:</label>
-        <select
-          className="select"
-          value={toCurrency}
-          onChange={(e) => setToCurrency(e.target.value)}
-        >
-          <option value="usd">USD</option>
-          {displayCoin.map((coin) => (
-            <option key={coin.id} value={coin.id}>
-              {coin.name}
-            </option>
-          ))}
-        </select>
-      </div>
-      <div>
-        <h2 className="result">
-          Result: {result}{" "}
-          {toCurrency === "usd"
-            ? "USD"
-            : displayCoin
-                .find((coin) => coin.id === toCurrency)
-                ?.symbol.toUpperCase()}
-        </h2>
+    <div>
+      <div className="container">
+        <h1 className="title">
+          <span>Cryptocurrency</span> Converter
+        </h1>
+        <div>
+          <label className="label">From:</label>
+          <select
+            className="select"
+            value={fromCurrency}
+            onChange={(e) => setFromCurrency(e.target.value)}
+          >
+            <option value="usd">USD</option>
+            {displayCoin.map((coin) => (
+              <option key={coin.id} value={coin.id}>
+                {coin.name}
+              </option>
+            ))}
+          </select>
+          <input
+            className="input"
+            type="number"
+            value={amount}
+            onChange={(e) => setAmount(Number(e.target.value))}
+          />
+        </div>
+        <div>
+          <label className="label">To:</label>
+          <select
+            className="select"
+            value={toCurrency}
+            onChange={(e) => setToCurrency(e.target.value)}
+          >
+            <option value="usd">USD</option>
+            {displayCoin.map((coin) => (
+              <option key={coin.id} value={coin.id}>
+                {coin.name}
+              </option>
+            ))}
+          </select>
+        </div>
+        <div>
+          <h2 className="result">
+            Result: {result}{" "}
+            {toCurrency === "usd"
+              ? "USD"
+              : displayCoin
+                  .find((coin) => coin.id === toCurrency)
+                  ?.symbol.toUpperCase()}
+          </h2>
+        </div>
       </div>
     </div>
   );
