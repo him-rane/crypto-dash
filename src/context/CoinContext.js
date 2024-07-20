@@ -14,8 +14,6 @@ export const CoinContextProvider = (props) => {
       method: "GET",
       headers: {
         accept: "application/json",
-
-        "x-cg-pro-api-key": process.env.API_KEY,
       },
     };
 
