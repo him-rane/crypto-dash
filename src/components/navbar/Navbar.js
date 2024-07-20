@@ -1,4 +1,4 @@
-import React, { useContext } from "react";
+import React, { useContext, useState } from "react";
 import "./navbar.css";
 
 import { SiBitcoinsv } from "react-icons/si";
@@ -6,6 +6,12 @@ import { CoinContext } from "../../context/CoinContext";
 import { Link } from "react-router-dom";
 
 const Navbar = () => {
+  const [menu, setMenu] = useState("");
+  const handleMenuClick = (props) => {
+    return () => {
+      setMenu(props);
+    };
+  };
   const { setCurrency } = useContext(CoinContext);
   const currencyHandler = (event) => {
     switch (event.target.value) {
@@ -29,13 +35,31 @@ const Navbar = () => {
   };
   return (
     <div className="navbar">
-      <SiBitcoinsv className="logo" />
+      <div className="logo">
+        <SiBitcoinsv />
+        <p>
+          <span>crypto</span>Dash
+        </p>
+      </div>
+
       <ul>
         <li>
-          <Link to={"/"}>Home</Link>
+          <Link
+            onClick={handleMenuClick("home")}
+            className={menu === "home" ? "active" : ""}
+            to={"/"}
+          >
+            Home
+          </Link>
         </li>
         <li>
-          <Link to={"/converter"}>Converter</Link>
+          <Link
+            onClick={handleMenuClick("converter")}
+            className={menu === "converter" ? "active" : ""}
+            to={"/converter"}
+          >
+            Converter
+          </Link>
         </li>
       </ul>
       <div className="nav-right">

@@ -44,7 +44,9 @@ function CurrencyConverter() {
 
   return (
     <div className="container">
-      <h1 className="title">Cryptocurrency Converter</h1>
+      <h1 className="title">
+        <span>Cryptocurrency</span> Converter
+      </h1>
       <div>
         <label className="label">From:</label>
         <select

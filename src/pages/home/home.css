@@ -42,8 +42,8 @@
 
 .hero button {
   border: none;
-  background: greenyellow;
-  color: black;
+  background: green;
+  color: whitesmoke;
   font-size: 16px;
   padding: 10px 30px;
   border-radius: 5px;
@@ -54,7 +54,7 @@
   max-width: 800px;
   margin: auto;
   background: whitesmoke;
-  border-radius: 15x;
+  border-radius: 2%;
 }
 
 .table-layout {
@@ -62,7 +62,10 @@
   grid-template-columns: 0.5fr 1.5fr 1fr 1fr 1.5fr;
   padding: 15px 20px;
   align-items: center;
-  border-bottom: 1px solid gray;
+}
+
+.crypto-table div:first-child {
+  border-bottom: 1px solid greenyellow;
 }
 
 .table-layout div {
@@ -82,4 +85,8 @@
 .table-layout .red {
   padding: 10px;
   color: red;
+}
+
+Link {
+  border: none;
 }
