@@ -3,21 +3,22 @@ import "./navbar.css";
 
 import { SiBitcoinsv } from "react-icons/si";
 import { CoinContext } from "../../context/CoinContext";
+import { Link } from "react-router-dom";
 
 const Navbar = () => {
   const { setCurrency } = useContext(CoinContext);
   const currencyHandler = (event) => {
     switch (event.target.value) {
       case "usd": {
-        setCurrency({ name: "usd", symbol: "Us" });
+        setCurrency({ name: "usd", symbol: "$" });
         break;
       }
-      case "usd": {
-        setCurrency({ name: "eur", symbol: "Eu" });
+      case "eur": {
+        setCurrency({ name: "eur", symbol: "€" });
         break;
       }
       case "inr": {
-        setCurrency({ name: "inr", symbol: "Rs" });
+        setCurrency({ name: "inr", symbol: "₹" });
         break;
       }
       default: {
@@ -30,8 +31,12 @@ const Navbar = () => {
     <div className="navbar">
       <SiBitcoinsv className="logo" />
       <ul>
-        <li>Home</li>
-        <li>Converter</li>
+        <li>
+          <Link to={"/"}>Home</Link>
+        </li>
+        <li>
+          <Link to={"/converter"}>Converter</Link>
+        </li>
       </ul>
       <div className="nav-right">
         <select onChange={currencyHandler}>
@@ -39,7 +44,6 @@ const Navbar = () => {
           <option value="inr">INR</option>
           <option value="eur">EUR</option>
         </select>
-        <button> Sign Up</button>
       </div>
     </div>
   );

@@ -53,3 +53,12 @@
   border: none;
   cursor: pointer;
 }
+
+@media (max-width: 800px) {
+  .navbar {
+    padding: 20px 8%;
+  }
+  .navbar ul {
+    display: none;
+  }
+}
